@@ -1,6 +1,6 @@
 # Map of Romania represented as an adjacency list
 romaina_map = {
-    "Arad": [("Zerind"), 75, ("Timisoara", 118), ("Sibiu", 140)],
+    "Arad": [("Zerind", 75), ("Timisoara", 118), ("Sibiu", 140)],
     "Zerind": [("Arad", 75), ("Oradea", 71)],
     "Oradea": [("Zerind", 71), ("Sibiu", 151)],
     "Sibiu": [("Arad", 140), ("Oradea", 151), ("Fagaras", 99), ("Rimnicu Vilcea", 80)],
