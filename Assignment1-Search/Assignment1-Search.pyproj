@@ -21,9 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="aStarSearch.py" />
     <Compile Include="bestFirstSearch.py" />
     <Compile Include="depthFirstSearch.py" />
-    <Compile Include="haversineHeuristic.py" />
     <Compile Include="heuristics.py" />
     <Compile Include="romaniaDistances.py" />
     <Compile Include="breadthFirstSearch.py" />
