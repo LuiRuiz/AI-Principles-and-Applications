@@ -1,6 +1,5 @@
 import heuristics
 import romaniaDistances
-#import haversineHeuristic: now in heuristics.py files
 import breadthFirstSearch
 import depthFirstSearch
 import bestFirstSearch
@@ -35,6 +34,7 @@ def main():
 
     # To be used with the best first (greedy algorithm) and A* algorithm
     traingleInequalityHeuristic = heuristics.traingleInequalityHeuristics(endCity)
+    haversineHeuristic = heuristics.haversineHeuristics(endCity)
 
     # Breadth First Search
     BFS = breadthFirstSearch.breadthFirstSearch(romaniaDistances.romaina_map, startCity, endCity)
