@@ -1,9 +1,39 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Missionaries and Cannibals
+% 
 % State format: [ML, CL, Side]
 % ML = missionaries on left (0–3)
 % CL = cannibals on left (0–3)
 % Side = left or right (boat location)
+% 
+% The right bank is computed as:
+% MR = 3 - ML
+% CR = 3 - CL
+%
+% Intial State:
+% start([3,3,left]).
+%
+% Goal State:
+% goal([0,0,right]).
+% 
+% Search Algorithms Implemented:
+% 1. Depth-First Search (DFS) with cycle checking
+%    Predicate: solve_dfs(Path)
+%
+% 2. Breadth-First Search (BFS) for shortest solution
+%    Predicate: solve_bfs(Path)
+%
+%
+%
+% To run the program:
+% Download the mc.pl file and the tests.pl to the same folder
+% Open the SWI-Prolog desktop application
+% Find the file path for the folder the two files were downloaded to and copy that path
+% Periods (.) are included for all the following commands
+% In thw SWI-Prolog console, type working_directory(_, 'file path that you coped with / instead of \ '). Should return true
+% Type [mc]. This should also return true
+% Type [tests]. This should also return true
+% Type run_tests. This will run the 7 required test cases for the assignment and display the results. And at the end it should also return true. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
