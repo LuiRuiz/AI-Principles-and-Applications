@@ -38,8 +38,14 @@ full(Board) :- \+ member(e, Board).
 % ---------- TODO A1: move/3 ----------
 % move(Board, Player, NextBoard) holds if NextBoard results from placing Player in an empty cell.
 move(_Board, _Player, _NextBoard) :-
-    % TODO
-    fail.
+    % pick an empty cell
+    member(e, _Board),
+
+    % place Player there, i.e. split Board into Front and Back, with e in between, then replace e with Player
+    append(Front, [e|Back], _Board),
+
+    % create NextBoard by replacing e with Player
+    append(Front, [Player|Back], _NextBoard).
 
 % ---------- TODO A2: terminal/1 and utility/2 ----------
 terminal(_Board) :-
