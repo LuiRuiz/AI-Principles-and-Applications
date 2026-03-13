@@ -49,8 +49,10 @@ move(_Board, _Player, _NextBoard) :-
 
 % ---------- TODO A2: terminal/1 and utility/2 ----------
 terminal(_Board) :-
-    % TODO: win for x or win for o or full
-    fail.
+    % Terminal if x wins, o wins, or board is full (draw); uses win and full to check conditions
+    win(_Board, x);
+    win(_Board, o);
+    full(_Board).
 
 utility(_Board, _U) :-
     % TODO: U=1 if x wins, -1 if o wins, 0 if draw
